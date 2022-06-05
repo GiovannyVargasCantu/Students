@@ -1,0 +1,22 @@
+<ion-card>
+    <ion-card-content>
+        <p>Nombre: <strong>{{alumnoDetalle.nombre}}</strong></p>
+        <p>Apellido: <strong>{{alumnoDetalle.apellido}}</strong></p>
+        <p>Matricula: <strong>{{alumnoDetalle.matricula}}</strong></p>
+    </ion-card-content>
+    <ion-button routerLink="/inicio">
+       <ion-icon name="arrow-back-circle-outline"></ion-icon>
+       <ion-label>Regresar</ion-label>
+    </ion-button>
+    <ion-button (click)="ToggleEditar()">
+        Editar
+    </ion-button>
+    <ion-button class="botonaction" (click)="presentActionSheet()">alumnos</ion-button>
+</ion-card> 
+<ion-card>
+<ion-card-content *ngIf="editando">
+    <ion-input placeholder="Editar nombre:  Ejemplo: Hola soy un nuevo nombre" [(ngModel)]="alumnoDetalle.nombre"></ion-input>
+    <ion-input placeholder="Editar apellido:  Ejemplo: Hola soy un nuevo apellido" [(ngModel)]="alumnoDetalle.apellido"></ion-input>
+    <ion-button (click)="SavearAlumno(identificacion, alumnoDetalle)">Guardar Cambios</ion-button>
+ </ion-card-content>
+</ion-card> 

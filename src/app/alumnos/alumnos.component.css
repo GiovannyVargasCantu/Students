@@ -1,0 +1,14 @@
+.logo  {
+    text-align: right;
+}
+
+.boton-final{
+    --background: green;
+}
+
+.boton-inicio{
+    --background: red;
+}
+.botonaction{
+    --background: rgb(50, 255, 255);
+}
